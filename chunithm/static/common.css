@@ -1,0 +1,2485 @@
+@charset "UTF-8";
+/*----------------------------------------------------------------------------------
+  ◆引用元基本設定
+----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------
+	◆基本指定
+----------------------------------------------------------------------------------*/
+body {
+  min-height: 100%;
+  color: #000;
+  line-height: 110%;
+  font-family: "ヒラギノ角ゴ Pro W3","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS P Gothic",sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  background-color: #ffe164;
+  background-image: url(../images/background.png),
+                    -webkit-linear-gradient(top, #ffe164 0%, #ffb450 100%);
+  background-image: url(../images/background.png),
+                    linear-gradient(to bottom, #ffe164 0%, #ffb450 100%);
+  background-size: 135px 135px,
+                   100% calc(100% + 80px);
+  background-attachment: fixed;
+  font-size: 1.0rem;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/**/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+html {
+ overflow-y: scroll;
+}
+
+/*-------- 基本パーツ --------*/
+h1 {
+  font-size: 0pt;
+  line-height: 0%;
+}
+
+h2, h3, h4, h5, h6 {
+  text-decoration: none;
+}
+
+a {
+  color: #32AAB4;
+}
+
+a:hover {
+  color: #1CBAE8;
+  text-decoration: none;
+}
+
+a:active {
+  color: #75e0ff;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0px;
+  vertical-align: bottom;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+  border-radius: 5px;
+  border: 2px #999 solid;
+  font-family: helvetica,"ヒラギノ角ゴ Pro W3","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS P Gothic",sans-serif;
+  color: #000;
+  padding: 5px;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #fff url(../images/icon_selectarrow.png) no-repeat right center;
+  background-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+  background: rgba(0, 150, 200, 0.1);
+  outline: 3px rgba(0, 150, 200, 0.3) solid;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="checkbox"],
+input[type="radio"] {
+  outline: none;
+}
+
+/* -------------◆◆セレクトバー共通◆◆----------- */
+.select01 {
+  border: 1px #CCC solid;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.1), 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.select02 {
+  background: #CCC;
+  border: 1px #999 solid;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.1), 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/*----------------------------------------------------------------------------------
+	◆基本レイアウト（共通項目）
+----------------------------------------------------------------------------------*/
+/* -------------◆◆コンテナ◆◆----------- */
+#wrap {
+  display: block;
+  width: 480px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* -------------◆◆ヘッダ◆◆----------- */
+#header {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 460px;
+  height: 92px;
+  margin: 0 auto 15px auto;
+  padding: 0;
+  border-radius: 5px;
+  background: url(../images/logo.png) no-repeat center center;
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.1), 8px 8px 1px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+#header a {
+  display: block;
+  width: 460px;
+  height: 92px;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------◆◆メインメニュー◆◆----------- */
+#main_menu ul {
+  display: block;
+  width: 424px;
+  height: auto;
+  margin: 0 auto 3px auto;
+  padding: 0;
+  text-align: left;
+}
+#main_menu ul li {
+  display: inline-block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 83px;
+  height: 85px;
+  margin: 0 11px 2px 12px;
+  padding: 0;
+}
+#main_menu ul li a, #main_menu ul li a:active {
+  display: block;
+  width: 82px;
+  height: 83px;
+  margin: 0;
+  padding: 0;
+}
+
+#main_menu {
+  /*ホーム*/
+  /*レコード*/
+  /*コレクション*/
+  /*フレンド*/
+  /*ランキング*/
+  /*WORLD'S END*/
+  /*コース*/
+  /*イロドリミドリ*/
+  font-size: 0;
+}
+#main_menu .btn_home {
+  background: url(../images/menu_home.png) no-repeat center top;
+  background-size: 100%;
+}
+#main_menu .btn_home a:active, #main_menu .btn_home_on {
+  background: url(../images/menu_home.png) no-repeat center -84px;
+  background-size: 100%;
+}
+#main_menu .btn_record {
+  background: url(../images/menu_record.png) no-repeat center top;
+  background-size: 100%;
+}
+#main_menu .btn_record a:active, #main_menu .btn_record_on {
+  background: url(../images/menu_record.png) no-repeat center -84px;
+  background-size: 100%;
+}
+#main_menu .btn_collection {
+  background: url(../images/menu_collection.png) no-repeat center top;
+  background-size: 100%;
+}
+#main_menu .btn_collection a:active, #main_menu .btn_collection_on {
+  background: url(../images/menu_collection.png) no-repeat center -84px;
+  background-size: 100%;
+}
+#main_menu .btn_friend {
+  background: url(../images/menu_friend.png) no-repeat center top;
+  background-size: 100%;
+}
+#main_menu .btn_friend a:active, #main_menu .btn_friend_on {
+  background: url(../images/menu_friend.png) no-repeat center -84px;
+  background-size: 100%;
+}
+#main_menu .btn_ranking {
+  background: url(../images/menu_ranking.png) no-repeat center top;
+  background-size: 100%;
+}
+#main_menu .btn_ranking a:active, #main_menu .btn_ranking_on {
+  background: url(../images/menu_ranking.png) no-repeat center -84px;
+  background-size: 100%;
+}
+#main_menu .btn_worldsend {
+  background: url(../images/menu_worldsend.png) no-repeat center top;
+  background-size: 100%;
+}
+#main_menu .btn_worldsend a:active, #main_menu .btn_worldsend_on {
+  background: url(../images/menu_worldsend.png) no-repeat center -84px;
+  background-size: 100%;
+}
+#main_menu .btn_course {
+  background: url(../images/menu_course.png) no-repeat center top;
+  background-size: 100%;
+}
+#main_menu .btn_course a:active, #main_menu .btn_course_on {
+  background: url(../images/menu_course.png) no-repeat center -84px;
+  background-size: 100%;
+}
+#main_menu .btn_irodori {
+  background: url(../images/menu_irodori.png) no-repeat center top;
+  background-size: 100%;
+}
+#main_menu .btn_irodori a:active, #main_menu .btn_irodori_on {
+  background: url(../images/menu_irodori.png) no-repeat center -84px;
+  background-size: 100%;
+}
+#main_menu .btn_team {
+  background: url(../images/menu_team.png) no-repeat center top;
+  background-size: 100%;
+}
+#main_menu .btn_team a:active, #main_menu .btn_team_on {
+  background: url(../images/menu_team.png) no-repeat center -84px;
+  background-size: 100%;
+}
+/* -------------◆◆コンテンツ（本体）◆◆----------- */
+#inner {
+  display: block;
+  width: 460px;
+  height: auto;
+  margin: 0 auto 30px auto;
+  padding: 0 0 50px 0;
+  min-height: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+/* -------------◆◆フッタ◆◆----------- */
+/*フッタブロック*/
+#footer {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10px 0;
+  position: relative;
+  /*border-top: 1px #d2a75a solid;*/
+  border-top: 1px #666 solid;
+  /*color: #fffbbd;*/
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+/*フッタバナー*/
+.footer_banner {
+  display: block;
+  width: 406px;
+  height: auto;
+  margin: 0 auto 5px auto;
+  padding: 0;
+}
+.footer_banner img {
+  width: 200px;
+  margin: 0 0 3px 0;
+}
+.footer_banner_left {
+  float: left;
+  width: 100px;
+  margin: 0;
+}
+.footer_banner_right {
+  float: right;
+  width: 100px;
+  margin: 0;
+}
+
+.footer_banner_left img, .footer_banner_right img {
+  width: 100px;
+}
+
+/*フッタメニュー*/
+.footer_menu {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px 0 5px 0;
+  display: block;
+  /*
+  border-top: 1px #d2a75a solid;
+  border-bottom: 1px #d2a75a solid;
+  */
+  border-top: 1px #666 solid;
+  border-bottom: 1px #666 solid;
+  text-align: center;
+  z-index: 10;
+}
+.footer_menu ul {
+  display: block;
+  width: 480px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+}
+.footer_menu ul li {
+  display: inline-block;
+  margin: 0 5px 5px 5px;
+  text-align: center;
+}
+.footer_menu ul li a {
+  /*color: #fffbbd;*/
+  color: #ce27b3;
+}
+
+/*フッタ前注意書*/
+.footer_attention {
+  display: block;
+  width: 480px;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px 0 0 0;
+  line-height: 110%;
+  text-align: center;
+  z-index: 10;
+}
+
+/*コピーライト*/
+#footer_copy {
+  margin: 0 auto 5px auto;
+}
+#footer_copy img {
+  margin: 0 auto 5px auto;
+}
+
+/*----------------------------------------------------------------------------------
+	◆もっと見る
+----------------------------------------------------------------------------------*/
+/*もっと見る*/
+.more {
+  display: block;
+  width: auto;
+  height: 20px;
+  margin: 0 auto;
+  padding: 0 25px 0 0;
+  font-weight: bold;
+  line-height: 20px;
+  background: url(../images/icon_arrow_more.png) no-repeat right center;
+  text-align: right;
+  cursor: pointer;
+  z-index: 100;
+}
+.more:active {
+  height: 20px;
+  background: url(../images/icon_arrow_more2.png) no-repeat right center;
+}
+
+/*----------------------------------------------------------------------------------
+	◆汎用ボタン
+----------------------------------------------------------------------------------*/
+[class^="btn_"] {
+  display: block;
+  position: relative;
+  line-height: 100%;
+}
+
+[class^="btn_"] a,
+[class^="btn_"] input {
+  display: block;
+  z-index: 10;
+  text-decoration: none;
+}
+
+/* -------------◆◆戻るボタン◆◆----------- */
+.btn_back {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 115px;
+  height: 41px;
+  margin: auto;
+  padding: 0;
+  background: url(../images/btn_back.png) no-repeat center top;
+  background-size: 100%;
+  cursor: pointer;
+}
+.btn_back:active {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 115px;
+  height: 41px;
+  margin: auto;
+  padding: 0;
+  background: url(../images/btn_back.png) no-repeat center -41px;
+  background-size: 100%;
+}
+
+/* -------------◆◆設定変更ボタン◆◆----------- */
+#setting {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 115px;
+  height: 41px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background: url(../images/btn_setting.png) no-repeat center top;
+  background-size: 100%;
+  bottom: 15px;
+  right: 5px;
+  z-index: 100;
+}
+#setting:active {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 115px;
+  height: 41px;
+  margin: 0;
+  padding: 0;
+  background: url(../images/btn_setting.png) no-repeat center -41px;
+  background-size: 100%;
+}
+
+/* -------------◆◆難易度ボタン◆◆----------- */
+/*各ボタン表示ブロック*/
+.difficulty_btn_block {
+  display: block;
+  width: 100%;
+  height: autuo;
+  margin: 15px auto 10px auto;
+  padding: 0;
+  text-align: center;
+}
+
+.difficulty_btn_record, .difficulty_btn_highscore_all, .difficulty_btn_highscore {
+  display: inline-block;
+  width: auto;
+  height: autuo;
+  margin: 0;
+  padding: 0 1px;
+  word-wrap: break-word;
+  vertical-align: top;
+  text-align: center;
+}
+
+.difficulty_btn_record {
+  width: 20%;
+}
+
+.difficulty_btn_highscore_all {
+  width: 25%;
+}
+
+.difficulty_btn_highscore {
+  width: 155;
+}
+
+/*ALL*/
+.btn_all {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 88px;
+  height: 50px;
+  margin: 0 auto 3px auto;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  color: #19AA19;
+  background: url(../images/btn_all.png) no-repeat 0 0;
+  background-size: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+.btn_all:active {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 88px;
+  height: 50px;
+  margin: 0 auto 3px auto;
+  padding: 0;
+  background: url(../images/btn_all.png) no-repeat 0 -50px;
+  background-size: 100%;
+}
+.btn_all_on {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 88px;
+  height: 50px;
+  margin: 0 auto 3px auto;
+  padding: 0;
+  color: #19AA19;
+  background: url(../images/btn_all.png) no-repeat 0 -50px;
+  background-size: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/*難易度ボタン共通*/
+.btn_basic, .btn_advanced, .btn_expert, .btn_master {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 3px auto;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background-position: 0 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.btn_basic:active, .btn_advanced:active, .btn_expert:active, .btn_master:active {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 3px auto;
+  padding: 0;
+  background-position: 0 -50px;
+}
+.btn_basic_on, .btn_advanced_on, .btn_expert_on, .btn_master_on {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 3px auto;
+  padding: 0;
+  background-position: 0 -50px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/*BASIC*/
+.btn_basic, .btn_basic:active, .btn_basic_on {
+  color: #19AA19;
+  background-image: url(../images/btn_basic.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/*ADVANCED*/
+.btn_advanced, .btn_advanced:active, .btn_advanced_on {
+  color: #F55000;
+  background-image: url(../images/btn_advanced.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/*EXPERT*/
+.btn_expert, .btn_expert:active, .btn_expert_on {
+  color: #A00A50;
+  background-image: url(../images/btn_expert.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/*MASTER*/
+.btn_master, .btn_master:active, .btn_master_on {
+  color: #8200DC;
+  background-image: url(../images/btn_master.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* -------------◆◆フローティングページボタン◆◆----------- */
+/*ページの一番上*/
+#page-top {
+  width: 53px;
+  position: fixed;
+  right: 5px;
+  bottom: 42px;
+  z-index: 9999;
+  cursor: pointer;
+}
+/*ページの一番下*/
+#page-bottom {
+  width: 54px;
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+/*----------------------------------------------------------------------------------
+	◆見出し
+----------------------------------------------------------------------------------*/
+/* -------------◆◆ページタイトル◆◆----------- */
+h2#page_title {
+  display: block;
+  width: 420px;
+  height: auto;
+  margin: 0 auto 10px auto;
+  padding: 7px 10px 5px 10px;
+  position: relative;
+  background-image: linear-gradient(to bottom, #333 0%, #282828 50%, #000 50%, #000 100%);
+  box-shadow: inset 1px 1px 10px rgba(255, 255, 255, 0.3), 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border: 2px #000 solid;
+  border-radius: 5px;
+  color: #FFF;
+  line-height: 120%;
+  text-align: center;
+  z-index: 20;
+}
+
+/* -------------◆◆見出し◆◆----------- */
+/*フチブルー斜線つき*/
+h3.title {
+  display: block;
+  width: 420px;
+  height: auto;
+  margin: 0 auto 10px auto;
+  padding: 7px 10px 5px 10px;
+  position: relative;
+  background: #FFF url(../images/midashi_pagetitle_bg.png) no-repeat center -35px;
+  box-shadow: inset 1px 1px 10px rgba(115, 194, 193, 0.3), inset -1px -1px 10px rgba(115, 194, 193, 0.3), 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px #77A29C solid;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #000;
+  line-height: 120%;
+  text-align: center;
+  z-index: 20;
+}
+
+/* -------------◆◆ボックスの中の見出し（黒背景・白文字）◆◆----------- */
+.box_inner01 {
+  display: block;
+  width: 100%;
+  background: #000;
+  color: #FFF;
+  padding: 5px 10px;
+  margin: 0 auto 10px auto;
+  text-align: left;
+}
+
+/*----------------------------------------------------------------------------------
+	◆仕切り線
+----------------------------------------------------------------------------------*/
+/* -------------◆◆太点線・黒◆◆----------- */
+hr.line_dot_black {
+  height: 0px;
+  border: 0;
+  border-bottom: 3px #000 dotted;
+  box-shadow: none;
+  margin-bottom: 10px;
+}
+
+/*----------------------------------------------------------------------------------
+	◆枠・ボックス（幅は別途指定・幅のみはcommon.cssに記載。それ以外はcontents.css）
+----------------------------------------------------------------------------------*/
+/* -------------◆◆汎用大枠（二重枠）　コンテンツ表示大枠　◆◆----------- */
+.frame01 {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 4px;
+  position: relative;
+  background-color: #d9ebee;
+  background-image: linear-gradient(to bottom, #d9ebee, #91a0a5);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+  border: 1px rgba(255, 255, 255, 0.1) solid;
+  border-radius: 10px;
+  z-index: 5;
+}
+
+.frame01_inside {
+  display: block;
+  margin: 0 auto;
+  padding: 0 0 15px 0;
+  position: relative;
+  background-color: #F0F0F0;
+  background-image: linear-gradient(to bottom, #F0F0F0, #C8C8C8);
+  border: 2px #000 solid;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+/* -------------◆◆汎用枠内・黒フチ枠◆◆----------- */
+.box01 {
+  display: block;
+  position: relative;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 0;
+  margin: 0 auto 10px auto;
+  /*text-align: left;*/
+  z-index: 20;
+  position: relative;
+  background: #FFF;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border: 2px #000 solid;
+  text-align: center;
+}
+
+/*見出し・タイトル用黒塗り部分*/
+.box01_title {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 10px auto;
+  padding: 5px 10px;
+  background: #282828;
+  background-image: linear-gradient(to bottom, #333, #333, #000, #000);
+  color: #FFF;
+  text-align: center;
+}
+
+.box01_title img {
+  height: 20px;
+  margin: -2px auto 0 auto;
+}
+
+/*黒フチ枠内塗つぶし（帯）*/
+.box01_inner, .box01_inner_bottom {
+  display: block;
+  width: 100%;
+  background: #000;
+  background-image: linear-gradient(160deg, #111 0%, #303030 37%, #000000 40%, #000000 100%);
+  color: #FFF;
+  padding: 5px 10px;
+}
+
+.box01_inner {
+  margin: 0 auto 10px auto;
+}
+
+.box01_inner_bottom {
+  margin: 0 auto;
+  bottom: 0;
+}
+
+.box01_inner2, .box01_inner2_bottom {
+  display: block;
+  width: 100%;
+  background: #DDD;
+  padding: 5px 10px;
+}
+
+.box01_inner2 {
+  margin: 0 auto 10px auto;
+}
+
+.box01_inner2_bottom {
+  margin: 0 auto;
+  bottom: 0;
+}
+
+/* -------------◆◆角丸・斜線つき枠（うっすらブルー）◆◆----------- */
+.frame02 {
+  display: block;
+  position: relative;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto 10px auto;
+  /*text-align: left;*/
+  z-index: 20;
+  position: relative;
+  background-color: #FFF;
+  box-shadow: inset 1px 1px 10px rgba(115, 194, 193, 0.3), inset -1px -1px 10px rgba(115, 194, 193, 0.3), 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border: 1px #77A29C solid;
+  color: #000;
+  line-height: 120%;
+  text-align: center;
+  z-index: 20;
+}
+
+/* -------------◆◆半透明影付き◆◆----------- */
+.box02 {
+  display: block;
+  position: relative;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto 10px auto;
+  /*text-align: left;*/
+  z-index: 20;
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 1px -3px 5px rgba(255, 255, 255, 0.8), 0px -1px 1px rgba(0, 0, 0, 0.1), 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border: 1px #EEE solid;
+  text-align: left;
+  z-index: 20;
+}
+
+/* -------------◆◆黒フチ枠内・黒枠（うっすら白い反射）◆◆----------- */
+.box03 {
+  display: block;
+  position: relative;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 0 auto 10px auto;
+  /*text-align: left;*/
+  z-index: 20;
+  position: relative;
+  background-image: linear-gradient(to bottom, #000, #0E0706);
+  border: 1px #6D6A6B solid;
+  color: #DDD;
+  line-height: 120%;
+  text-align: center;
+  z-index: 20;
+}
+
+.box03:before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 3px;
+  background: url(../images/bg_gradiation01.png) no-repeat center top;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* -------------◆◆半透明影付き　paddingなし　◆◆----------- */
+.box04 {
+  display: block;
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 1px -3px 5px rgba(255, 255, 255, 0.8), inset 0px -1px 1px rgba(0, 0, 0, 0.1), 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 0px auto 10px auto;
+  text-align: left;
+  z-index: 20;
+}
+
+/* -------------◆◆黒フチ枠内・グレー角丸◆◆----------- */
+.box05 {
+  display: block;
+  position: relative;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 5px;
+  margin: 0 auto 10px auto;
+  /*text-align: left;*/
+  z-index: 20;
+  position: relative;
+  background: #DDD;
+  border: 1px #CCC solid;
+  color: #000;
+  line-height: 120%;
+  text-align: center;
+  z-index: 20;
+}
+
+/* -------------◆◆影付き色なし（楽曲リストなど）◆◆----------- */
+.box06 {
+  display: block;
+  position: relative;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto 10px auto;
+  /*text-align: left;*/
+  z-index: 20;
+  position: relative;
+  z-index: 20;
+  text-align: left;
+}
+
+/* -------------◆◆半透明影なし黒40％◆◆----------- */
+.box07 {
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 0 auto 10px auto;
+  /*text-align: left;*/
+  z-index: 20;
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: left;
+  z-index: 20;
+}
+
+/* -------------◆◆汎用枠内・黒フチ影なし枠◆◆----------- */
+.box08 {
+  display: block;
+  position: relative;
+  border-radius: 7px;
+  padding: 5px;
+  margin: 0 auto 10px auto;
+  /*text-align: left;*/
+  z-index: 20;
+  position: relative;
+  background-color: #FFF;
+  border: 2px #000 solid;
+  text-align: center;
+}
+
+/* -------------◆◆汎用枠内・まっくろ影なし枠◆◆----------- */
+.box09 {
+  display: block;
+  position: relative;
+  border-radius: 7px;
+  padding: 5px;
+  margin: 0 auto 10px auto;
+  /*text-align: left;*/
+  z-index: 20;
+  position: relative;
+  background-color: #000;
+  text-align: center;
+}
+
+/*真っ黒・濃い色ボックスタイトル*/
+.box_title_white {
+  position: relative;
+  font-weight: bold;
+  color: #FFF;
+  text-align: center;
+  margin: 5px auto 10px auto;
+}
+
+/*真っ黒・薄い色ボックスタイトル*/
+.box_title_black {
+  position: relative;
+  font-weight: bold;
+  color: #000;
+  margin: 5px auto 10px auto;
+  text-align: center;
+}
+
+/* -------------◆◆影付き白◆◆----------- */
+.box10 {
+  display: block;
+  position: relative;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto 5px auto;
+  /*text-align: left;*/
+  z-index: 20;
+  position: relative;
+  background: #FFF;
+  background-image: linear-gradient(to bottom, #fff, #eee);
+  border: 1px #CCC solid;
+  color: #000;
+  text-align: left;
+  z-index: 20;
+}
+
+/* -------------◆◆汎用枠内・黒 影なし枠うっすら光沢◆◆----------- */
+.box11 {
+  display: block;
+  position: relative;
+  border-radius: 7px;
+  padding: 5px;
+  margin: 0 auto 10px auto;
+  /*text-align: left;*/
+  z-index: 20;
+  position: relative;
+  background-color: #000;
+  background-image: linear-gradient(160deg, #353535 0%, #222 35%, #000000 40%, #000000 100%);
+  box-shadow: inset inset 1px 1px 5px rgba(255, 255, 255, 0.4), inset -2px -2px 8px rgba(255, 255, 255, 0.3);
+  border: 2px #000 solid;
+  text-align: center;
+}
+
+.box12 {
+  display: block;
+  position: relative;
+  background: #ddd;
+  border: 2px #000 solid;
+  border-radius: 5px;
+  color: #000;
+  line-height: 120%;
+  margin: 0px auto 10px auto;
+  text-align: center;
+  z-index: 20;
+}
+
+/*パステルオレンジ*/
+.box_pastelorange {
+  display: block;
+  position: relative;
+  background: #efe4c3;
+  border: 2px #000 solid;
+  border-radius: 5px;
+  color: #000;
+  line-height: 120%;
+  margin: 0px auto 10px auto;
+  text-align: center;
+  z-index: 20;
+}
+
+/*パステルグリーン*/
+.box_pastelgreen {
+  display: block;
+  position: relative;
+  background: #d2f1b5;
+  border: 2px #000 solid;
+  border-radius: 5px;
+  color: #000;
+  line-height: 120%;
+  margin: 0px auto 10px auto;
+  text-align: center;
+  z-index: 20;
+}
+
+/*パステルイエロー*/
+.box_pastelyellow {
+  display: block;
+  position: relative;
+  background: #ffffb7;
+  border-radius: 5px;
+  color: #000;
+  line-height: 120%;
+  margin: 0px auto 10px auto;
+  text-align: center;
+  z-index: 20;
+  font-size: 80%;
+}
+
+/* -------------◆◆黒フチオレンジ枠（プレイヤーデータ用）黒グレー枠（フレンド用）◆◆----------- */
+.box_player, .box_friend {
+  display: block;
+  position: relative;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto 10px auto;
+  /*text-align: left;*/
+  z-index: 20;
+  display: block;
+  position: relative;
+  border: 2px #000 solid;
+  color: #000;
+  line-height: 120%;
+  text-align: center;
+  z-index: 20;
+}
+
+.box_player {
+  background: #fbde37;
+  background-image: linear-gradient(to bottom, #fbde37, #f7c72f);
+}
+
+.box_friend {
+  background: #999;
+  background-image: linear-gradient(to bottom, #ccc, #999);
+}
+
+/* -------------◆◆難易度背景・タイトル色◆◆----------- */
+.music_box {
+  display: block;
+  position: relative;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0px auto 10px auto;
+  z-index: 20;
+  text-align: left;
+}
+
+.musiclist_box {
+  display: block;
+  position: relative;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0px auto 10px auto;
+  z-index: 20;
+  text-align: left;
+  cursor: pointer;
+}
+
+.bg_latest10 {
+  background-color: #FFF;
+  box-shadow: inset 1px 1px 10px rgba(115, 194, 193, 0.3), inset -1px -1px 10px rgba(115, 194, 193, 0.3), 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border: 1px #77A29C solid;
+}
+
+/*BASIC*/
+.title_basic {
+  font-weight: bold;
+  color: #19aa19;
+}
+.title_basic span {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 136px;
+  height: 20px;
+  margin: 0 auto;
+  padding: 0;
+  background: url(../images/icon_text_basic.png) no-repeat center center;
+}
+
+.bg_basic {
+  background-color: #19aa19;
+  background-image: linear-gradient(to bottom, #02d507, #19aa19);
+}
+
+/*ADVANCED*/
+.title_advanced {
+  font-weight: bold;
+  color: #f55000;
+}
+.title_advanced span {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 136px;
+  height: 20px;
+  margin: 0 auto;
+  padding: 0;
+  background: url(../images/icon_text_advanced.png) no-repeat center center;
+}
+
+.bg_advanced {
+  background-color: #f55000;
+  background-image: linear-gradient(to bottom, #ff8c00, #f55000);
+}
+
+/*EXPERT*/
+.title_expert {
+  font-weight: bold;
+  color: #a00a50;
+}
+.title_expert span {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 136px;
+  height: 20px;
+  margin: 0 auto;
+  padding: 0;
+  background: url(../images/icon_text_expert.png) no-repeat center center;
+}
+
+.bg_expert {
+  background-color: #b80034;
+  background-image: linear-gradient(to bottom, #ff005a, #b80034);
+}
+
+/*MASTER*/
+.title_master {
+  font-weight: bold;
+  color: #8200dc;
+}
+.title_master span {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 136px;
+  height: 20px;
+  margin: 0 auto;
+  padding: 0;
+  background: url(../images/icon_text_master.png) no-repeat center center;
+}
+
+.bg_master {
+  background-color: #8200dc;
+  background-image: linear-gradient(to bottom, #aa5fff, #8200dc);
+}
+
+/*WORLD'S END*/
+.title_worldsend span {
+  display: block;
+  width: 136px;
+  height: 20px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background: url(../images/icon_worldsend.png) no-repeat center center;
+  background-size: 100%;
+  font-weight: bold;
+  color: #697b7e;
+  margin: 0 auto;
+}
+
+.bg_worldsend {
+  background: url(../images/bg_gradiation02.png) no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.musiclist_worldsend_title_block, .play_musicdata_title_block, .play_musicdata_title_block2 {
+  display: block;
+  position: relative;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 10px;
+  margin: -5px 0 5px -5px;
+  /*text-align: left;*/
+  z-index: 20;
+  background: #282828;
+  background-image: linear-gradient(to bottom, #333, #333, #000, #000);
+  color: #FFF;
+  text-align: left;
+  z-index: 20;
+}
+
+.musiclist_worldsend_title_block {
+  width: 388px;
+}
+
+.play_musicdata_title_block {
+  width: 292px;
+}
+
+.play_musicdata_title_block2 {
+  width: 272px;
+}
+
+/*リスト用タイトル*/
+.musiclist_worldsend_title {
+  display: block;
+  margin: 17px 0 0 43px;
+  padding: 0;
+  position: relative;
+  color: #FFF;
+  font-weight: bold;
+  z-index: 20;
+}
+
+/*詳細用タイトル*/
+.play_musicdata_worldsend_title, .play_musicdata_worldsend_title2 {
+  display: inline-block;
+  margin: 0;
+  padding: 18px 0 0 0;
+  position: relative;
+  font-weight: bold;
+  color: #FFF;
+  vertical-align: middle;
+  z-index: 20;
+}
+
+.play_musicdata_worldsend_title {
+  width: 227px;
+}
+
+.play_musicdata_worldsend_title2 {
+  width: 208px;
+}
+
+/* -------------◆◆コース　クラス背景・タイトル色◆◆----------- */
+/*コース用楽曲リストのタイトル背景*/
+/*クラス1*/
+.title_class10 {
+  font-weight: bold;
+  color: #3b66f1;
+}
+
+.bg_class10 {
+  background-color: #3b66f1;
+  background-image: linear-gradient(to bottom, #587df3, #3b66f1);
+}
+.bg_class10 > .music_title, .bg_class10 > .class_name {
+  color: #fff;
+}
+
+/*クラス2*/
+.title_class11 {
+  font-weight: bold;
+  color: #0eb892;
+}
+
+.bg_class11 {
+  background-color: #0eb892;
+  background-image: linear-gradient(to bottom, #3ec6a8, #0eb892);
+}
+.bg_class11 > .music_title, .bg_class11 > .class_name {
+  color: #fff;
+}
+
+/*クラス3*/
+.title_class12 {
+  font-weight: bold;
+  color: #f1aa00;
+}
+
+.bg_class12 {
+  background-color: #f1aa00;
+  background-image: linear-gradient(to bottom, #f5bf40, #f1aa00);
+}
+.bg_class12 > .music_title, .bg_class12 > .class_name {
+  color: #fff;
+}
+
+/*クラス4*/
+.title_class13 {
+  font-weight: bold;
+  color: #e23a29;
+}
+
+.bg_class13 {
+  background-color: #e23a29;
+  background-image: linear-gradient(to bottom, #e65749, #e23a29);
+}
+.bg_class13 > .music_title, .bg_class13 > .class_name {
+  color: #fff;
+}
+
+/*クラス5*/
+.title_class14 {
+  font-weight: bold;
+  color: #a584b8;
+}
+
+.bg_class14 {
+  background-color: #4b0972;
+  background-image: linear-gradient(to bottom, #5d2180, #4b0972);
+}
+.bg_class14 > .music_title, .bg_class14 > .class_name {
+  color: #fff;
+}
+
+/*クラス∞*/
+.title_class20 span, span.title_class20 {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 97px;
+  height: 18px;
+  margin: 0 auto;
+  padding: 0;
+  background: url(../images/icon_class_inf.png) no-repeat center center;
+  background-size: 100%;
+  font-weight: bold;
+}
+
+.bg_class20 {
+  background: url(../images/bg_gradiation03.png) no-repeat center center;
+  background-size: 100%;
+}
+.bg_class20 > .music_title, .bg_class20 > .class_name {
+  color: #000;
+}
+
+/*クラス？*/
+.title_class21 span, span.title_class21 {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 86px;
+  height: 18px;
+  margin: 0 auto;
+  padding: 0;
+  background: url(../images/icon_class_q.png) no-repeat center center;
+  background-size: 100%;
+  font-weight: bold;
+  color: #697b7e;
+}
+
+.bg_class21 {
+  background: url(../images/bg_gradiation04.png) no-repeat center center;
+  background-size: 100%;
+}
+.bg_class21 > .music_title, .bg_class21 > .class_name {
+  color: #fff;
+}
+
+/* ------------- 障害情報など臨時お知らせ枠 ----------- */
+#info_message_box {
+  display: block;
+  width: 460px;
+  height: auto;
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  border: 2px #cc0000 solid;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/*----------------------------------------------------------------------------------
+	◆ポップアップウィンドウ
+----------------------------------------------------------------------------------*/
+/* -------------◆◆ポップアップ時のスクリーン（半透明黒）◆◆----------- */
+#overlay {
+  width: 100%;
+  min-height: 100%;
+  background: #000;
+  /*opacity: 0;*/
+  opacity: 0.8;
+  filter: alpha(opacity=0);
+  position: fixed;
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1999;
+}
+
+/* -------------◆◆ポップアップ共通◆◆----------- */
+[id^="popup_"] {
+  display: block;
+  width: 440px;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  /*display: none;*/
+  /*position: fixed;*/
+  position: relative;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  z-index: 3010;
+}
+
+/*ボックス内文字*/
+.popup_title {
+  margin: 40px auto 60px auto;
+}
+
+/* -------------◆◆ポップアップ・通常◆◆----------- */
+#popup_normal {
+  background: #CCC;
+  border: 3px #000 solid;
+}
+#popup_normal .popup_normal_inner {
+  display: block;
+  position: relative;
+  border-radius: 7px;
+  padding: 20px;
+  margin: 0 auto;
+  /*text-align: left;*/
+  z-index: 20;
+  position: relative;
+  background: #FFF;
+  border: 3px #000 solid;
+  z-index: 3020;
+}
+
+/* -------------◆◆ポップアップ・エラー＆注意◆◆----------- */
+#popup_attention {
+  background: #CC3333;
+  border: 3px #FFF solid;
+}
+#popup_attention .popup_attention_inner {
+  display: block;
+  position: relative;
+  border-radius: 7px;
+  padding: 20px;
+  margin: 0 auto;
+  /*text-align: left;*/
+  z-index: 20;
+  position: relative;
+  background: #FFF;
+  z-index: 3020;
+}
+
+/* -------------◆◆ポップアップ閉じるボタン◆◆----------- */
+.popup_close {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 56px;
+  height: 57px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background: url(../images/btn_close.png) no-repeat 0 0;
+  background-size: 100%;
+  top: -35px;
+  right: -35px;
+  cursor: pointer;
+  z-index: 3200;
+}
+.popup_close:active {
+  display: block;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 56px;
+  height: 57px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background: url(../images/btn_close.png) no-repeat 0 -57;
+  background-size: 100%;
+  top: -35px;
+  right: -35px;
+}
+
+/*----------------------------------------------------------------------------------
+	◆テキストボックス
+----------------------------------------------------------------------------------*/
+/* -------------◆◆アンダーラインブロック◆◆----------- */
+/*斜線枠の中の項目・アンダーラインブロック（下線黒）*/
+.block_underline {
+  display: block;
+  border-bottom: 1px #000 solid;
+  padding: 0 0 5px 0;
+  margin: 0 auto 5px auto;
+}
+.block_underline:last-child {
+  display: block;
+  border-bottom: none;
+  padding: auto;
+  margin: 0 auto;
+}
+
+/*斜線枠の中の項目・アンダーラインブロック（下線グレー）*/
+.block_underline999 {
+  display: block;
+  border-bottom: 1px #999 solid;
+  padding: 0 0 5px 0;
+  margin: 0 auto 5px auto;
+}
+
+/*斜線枠の中の項目・アンダーラインブロック（下線白）*/
+.block_underlinefff {
+  display: block;
+  border-bottom: 1px #fff solid;
+  padding: 0 0 5px 0;
+  margin: 0 auto 5px auto;
+}
+
+/*枠線黒パディング5*/
+.block_line {
+  display: block;
+  border: 1px #000 solid;
+  padding: 5px;
+  margin: 0 auto 5px auto;
+}
+
+/*下線なし*/
+.block_noline {
+  display: block;
+  border-bottom: none;
+  padding: 5px;
+  margin: 0 auto 5px auto;
+}
+
+/* -------------◆◆アイコンつき文字ブロック◆◆----------- */
+.block_icon_text {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+  vertical-align: middle;
+}
+.block_icon_text:last-child {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-align: left;
+  vertical-align: middle;
+}
+.block_icon_text img {
+  height: 22px;
+  margin-right: 10px;
+}
+
+/* -------------◆◆汎用テキストブロック（セクション扱い）◆◆----------- */
+.block {
+  width: 100%;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+/*----------------------------------------------------------------------------------
+	◆共通アイテム
+----------------------------------------------------------------------------------*/
+/* -------------◆◆アイコン付きのテキスト設定◆◆----------- */
+/*アイコン設定*/
+.icon_text_icon {
+  display: table-cell;
+  width: 22px;
+  height: 22px;
+  padding-right: 7px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/*テキスト（色設定なし）*/
+.icon_text_text {
+  display: table-cell;
+  font-weight: bold;
+  line-height: 120%;
+  padding-right: 7px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/*----------------------------------------------------------------------------------
+	◆ページ繰り
+----------------------------------------------------------------------------------*/
+/*ページ繰り用表示エリア*/
+.page_area {
+  display: block;
+  width: 400px;
+  height: auto;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+/*★前へ/次へ*/
+.page_rew, .page_next {
+  display: block;
+  height: 24px;
+  font-weight: bold;
+  line-height: 24px;
+  cursor: pointer;
+}
+.page_rew a, .page_next a {
+  display: block;
+  font-weight: bold;
+}
+.page_rew:active, .page_next:active {
+  display: block;
+}
+
+.page_rew {
+  float: left;
+  background: url(../images/icon_arrow_l1.png) no-repeat left center;
+  padding-left: 20px;
+  text-align: left;
+}
+.page_rew:active {
+  background: url(../images/icon_arrow_l2.png) no-repeat left center;
+}
+
+.page_next {
+  float: right;
+  background: url(../images/icon_arrow_r1.png) no-repeat right center;
+  text-align: right;
+  padding-right: 20px;
+}
+.page_next:active {
+  background: url(../images/icon_arrow_r2.png) no-repeat right center;
+}
+
+/*----------------------------------------------------------------------------------
+	◆幅設定
+----------------------------------------------------------------------------------*/
+/* -------------◆◆幅100%　親要素の幅の内側ぴったり（paddingやborderは避ける。）◆◆----------- */
+.w100full {
+  width: 100%;
+}
+
+/* -------------◆◆汎用枠（データ表示などの枠）2重枠　A ◆◆----------- */
+/*●基本枠（汎用枠の外側）*/
+.w460 {
+  width: 460px;
+}
+
+/*●基本内枠（汎用枠の内側）*/
+.w450 {
+  width: 450px;
+}
+
+/* -------------◆◆汎用枠の中に設置する枠　B　◆◆----------- */
+.w420 {
+  width: 420px;
+}
+
+/* -------------◆◆汎用枠の中に設置する枠の中のブロック　C　◆◆----------- */
+.w400 {
+  width: 400px;
+}
+
+/* -------------◆◆汎用枠の中に設置する枠の中のブロック　C　◆◆----------- */
+.w388 {
+  width: 388px;
+}
+.w300 {
+  width: 300px;
+}
+.w280 {
+  width: 280px;
+}
+.w200 {
+  width: 200px;
+}
+
+/*----------------------------------------------------------------------------------
+	◆フォント設定（色・サイズ）
+----------------------------------------------------------------------------------*/
+/* -------------◆◆ノーツのフォント色◆◆----------- */
+/*TAP（赤）*/
+.text_tap_red {
+  color: #ff011e;
+}
+.text_tap_red a {
+  color: #ff011e;
+  text-decoration: underline;
+}
+
+/*HOLD（黄）*/
+.text_hold_yellow {
+  color: #fff000;
+}
+.text_hold_yellow a {
+  color: #fff000;
+  text-decoration: underline;
+}
+
+/*SLIDE（青）*/
+.text_slide_blue {
+  color: #0093ff;
+}
+.text_slide_blue a {
+  color: #0093ff;
+  text-decoration: underline;
+}
+
+/*AIR（緑）*/
+.text_air_green {
+  color: #06d15a;
+}
+.text_air_green a {
+  color: #06d15a;
+  text-decoration: underline;
+}
+
+/*FLICK（水色）*/
+.text_flick_skyblue {
+  color: #41f0f6;
+}
+.text_flick_skyblue a {
+  color: #41f0f6;
+  text-decoration: underline;
+}
+
+/* -------------◆◆判定のフォント色◆◆----------- */
+/*JUSTICE CRITICAL（山吹）*/
+.text_critical {
+  color: #ffc600;
+}
+.text_critical a {
+  color: #ffc600;
+  text-decoration: underline;
+}
+
+/*JUSTICE（オレンジ）*/
+.text_justice {
+  color: #ff813d;
+}
+.text_justice a {
+  color: #ff813d;
+  text-decoration: underline;
+}
+
+/*ATTACK（緑）*/
+.text_attack {
+  color: #00ff42;
+}
+.text_attack a {
+  color: #00ff42;
+  text-decoration: underline;
+}
+
+/*MISS（ブルーグレー）*/
+.text_miss {
+  color: #b0b0b0;
+}
+.text_miss a {
+  color: #b0b0b0;
+  text-decoration: underline;
+}
+
+/* -------------◆◆難易度のフォント色◆◆----------- */
+/*ALL（灰）*/
+.text_all {
+  color: #999;
+}
+.text_all_link {
+  color: #999;
+  text-decoration: underline;
+}
+
+/*BASIC（緑）*/
+.text_basic {
+  color: #19aa19;
+}
+.text_basic_link {
+  color: #19aa19;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*ADVANNCED（オレンジ）*/
+.text_advanced {
+  color: #f55000;
+}
+.text_advanced_link {
+  color: #f55000;
+  text-decoration: underline;
+  cursor: pointer;}
+
+/*EXPERT（赤）*/
+.text_expert {
+  color: #a00a50;
+}
+.text_expert_link {
+  color: #a00a50;
+  text-decoration: underline;
+  cursor: pointer;}
+
+/*MASTER（紫）*/
+.text_master {
+  color: #8200dc;
+}
+.text_master_link {
+  color: #8200dc;
+  text-decoration: underline;
+  cursor: pointer;}
+
+/*WORDL'S END（緑）*/
+.text_worldsend01 {
+  color: #00ff18;
+}
+.text_worldsend01 a {
+  color: #00ff18;
+  text-decoration: underline;
+}
+
+/*WORDL'S END（黄色）*/
+.text_worldsend02 {
+  color: #ffe600;
+}
+.text_worldsend02 a {
+  color: #ffe600;
+  text-decoration: underline;
+}
+
+/*WORDL'S END（オレンジ）*/
+.text_worldsend03 {
+  color: #ff7800;
+}
+.text_worldsend03 a {
+  color: #ff7800;
+  text-decoration: underline;
+}
+
+/*WORDL'S END（ピンク）*/
+.text_worldsend04 {
+  color: #ff0073;
+}
+.text_worldsend04 a {
+  color: #ff0073;
+  text-decoration: underline;
+}
+
+/*WORDL'S END（紫）*/
+.text_worldsend05 {
+  color: #8200dc;
+}
+.text_worldsend05 a {
+  color: #8200dc;
+  text-decoration: underline;
+}
+
+/* -------------◆◆コースのフォント色◆◆----------- */
+/*コース クラス1*/
+.text_class10 {
+  color: #3b66f1;
+}
+
+/*コース クラス2*/
+.text_class11 {
+  color: #0eb892;
+}
+
+/*コース クラス3*/
+.text_class12 {
+  color: #f1aa00;
+}
+
+/*コース クラス4*/
+.text_class13 {
+  color: #e23a29;
+}
+
+/*コース クラス5*/
+.text_class14 {
+  color: #4b0972;
+}
+
+/* -------------◆◆汎用フォント色◆◆----------- */
+.text_red {
+  color: #CC0000;
+}
+
+.text_green {
+  color: #277024;
+}
+
+.text_blue {
+  color: #10286C;
+}
+
+.text_primaryblue {
+  color: #00F;
+}
+
+.text_baige {
+  color: #F5EACC;
+}
+
+.text_brown {
+  color: #5A3112;
+}
+
+.text_pink {
+  color: #ED3665;
+}
+
+.text_white {
+  color: #FFF;
+}
+
+/*ボールド*/
+.text_b {
+  font-weight: bold;
+}
+
+/*ノーマル*/
+.text_n {
+  font-weight: normal;
+}
+
+/* -------------◆◆汎用フォントサイズ◆◆----------- */
+.font_x-large {
+  font-size: 150%;
+}
+
+.font_large {
+  font-size: 120%;
+}
+
+.font_small {
+  font-size: 80%;
+}
+
+.font_x-small {
+  font-size: 60%;
+}
+
+.font_95 {
+  font-size: 95%;
+}
+
+.font_90 {
+  font-size: 90%;
+}
+
+.font_75 {
+  font-size: 75%;
+}
+
+.font_65 {
+  font-size: 65%;
+}
+
+.font_0 {
+  font-size: 0;
+}
+
+/*文字間隔*/
+.lettersp_0 {
+  letter-spacing: 0;
+}
+
+/*改行*/
+.line-height100 {
+  line-height: 100%;
+}
+
+/* -------------◆◆フォント揃え◆◆----------- */
+.text_l {
+  text-align: left;
+}
+
+.text_c {
+  text-align: center;
+}
+
+.text_r {
+  text-align: right;
+}
+
+.valign_top {
+  vertical-align: top;
+}
+
+.valign_middle {
+  vertical-align: middle;
+}
+
+.valign_bottom {
+  vertical-align: bottom;
+}
+
+/*----------------------------------------------------------------------------------
+	◆マージン
+----------------------------------------------------------------------------------*/
+/* -------------◆◆左マージン◆◆----------- */
+.ml-5 {
+  margin-left: -5px;
+}
+
+.ml-10 {
+  margin-left: -10px;
+}
+
+.ml-15 {
+  margin-left: -15px;
+}
+
+.ml_5 {
+  margin-left: 5px;
+}
+
+.ml_10 {
+  margin-left: 10px;
+}
+
+.ml_15 {
+  margin-left: 15px;
+}
+
+.ml_20 {
+  margin-left: 20px;
+}
+
+.ml_25 {
+  margin-left: 25px;
+}
+
+.ml_30 {
+  margin-left: 30px;
+}
+
+.ml_35 {
+  margin-left: 35px;
+}
+
+.ml_40 {
+  margin-left: 40px;
+}
+
+/* -------------◆◆右マージン◆◆----------- */
+.mr-5 {
+  margin-right: -5px;
+}
+
+.mr-10 {
+  margin-right: -10px;
+}
+
+.mr-15 {
+  margin-right: -15px;
+}
+
+.mr_5 {
+  margin-right: 5px;
+}
+
+.mr_10 {
+  margin-right: 10px;
+}
+
+.mr_15 {
+  margin-right: 15px;
+}
+
+.mr_20 {
+  margin-right: 20px;
+}
+
+.mr_25 {
+  margin-right: 25px;
+}
+
+.mr_30 {
+  margin-right: 30px;
+}
+
+.mr_35 {
+  margin-right: 35px;
+}
+
+.mr_40 {
+  margin-right: 40px;
+}
+
+/* -------------◆◆上マージン◆◆----------- */
+.mt-5 {
+  margin-top: -5px;
+}
+
+.mt-10 {
+  margin-top: -10px;
+}
+
+.mt-15 {
+  margin-top: -15px;
+}
+
+.mt-20 {
+  margin-top: -20px;
+}
+
+.mt-25 {
+  margin-top: -25px;
+}
+
+.mt-30 {
+  margin-top: -30px;
+}
+
+.mt_7 {
+  margin-top: 7px;
+}
+
+.mt_5 {
+  margin-top: 5px;
+}
+
+.mt_10 {
+  margin-top: 10px;
+}
+
+.mt_15 {
+  margin-top: 15px;
+}
+
+.mt_20 {
+  margin-top: 20px;
+}
+
+.mt_25 {
+  margin-top: 25px;
+}
+
+.mt_30 {
+  margin-top: 30px;
+}
+
+.mt_35 {
+  margin-top: 35px;
+}
+
+.mt_40 {
+  margin-top: 40px;
+}
+
+/* -------------◆◆下マージン◆◆----------- */
+.mb-5 {
+  margin-bottom: -5px;
+}
+
+.mb-10 {
+  margin-bottom: -10px;
+}
+
+.mb-15 {
+  margin-bottom: -15px;
+}
+
+.mb-20 {
+  margin-bottom: -20px;
+}
+
+.mb-25 {
+  margin-bottom: -25px;
+}
+
+.mb-30 {
+  margin-bottom: -30px;
+}
+
+.mb_0 {
+  margin-bottom: 0px;
+}
+
+.mb_5 {
+  margin-bottom: 5px;
+}
+
+.mb_10 {
+  margin-bottom: 10px;
+}
+
+.mb_15 {
+  margin-bottom: 15px;
+}
+
+.mb_20 {
+  margin-bottom: 20px;
+}
+
+.mb_25 {
+  margin-bottom: 25px;
+}
+
+.mb_30 {
+  margin-bottom: 30px;
+}
+
+.mb_35 {
+  margin-bottom: 35px;
+}
+
+.mb_40 {
+  margin-bottom: 40px;
+}
+
+/* -------------◆◆上下マージン◆◆----------- */
+.mtb_5 {
+  margin-bottom: 5px;
+}
+
+.mtb_10 {
+  margin-bottom: 10px;
+}
+
+.mtb_15 {
+  margin-bottom: 15px;
+}
+
+.mtb_20 {
+  margin-bottom: 20px;
+}
+
+.mtb_25 {
+  margin-bottom: 25px;
+}
+
+.mtb_30 {
+  margin-bottom: 30px;
+}
+
+/*----------------------------------------------------------------------------------
+	◆パディング
+----------------------------------------------------------------------------------*/
+/* -------------◆◆全周パディング◆◆----------- */
+.p_5 {
+  padding: 5px;
+}
+
+.p_10 {
+  padding: 10px;
+}
+
+/* -------------◆◆左パディング◆◆----------- */
+.pl_5 {
+  padding-left: 5px;
+}
+
+.pl_10 {
+  padding-left: 10px;
+}
+
+/* -------------◆◆上パディング◆◆----------- */
+.pt_5 {
+  padding-top: 5px;
+}
+
+.pt_10 {
+  padding-top: 10px;
+}
+
+.pt_15 {
+  padding-top: 15px;
+}
+
+.pt_20 {
+  padding-top: 20px;
+}
+
+.pt_25 {
+  padding-top: 25px;
+}
+
+.pt_30 {
+  padding-top: 30px;
+}
+
+/* -------------◆◆下パディング◆◆----------- */
+.pb_5 {
+  padding-bottom: 5px;
+}
+
+.pb_10 {
+  padding-bottom: 10px;
+}
+
+.pb_15 {
+  padding-bottom: 15px;
+}
+
+.pb_20 {
+  padding-bottom: 20px;
+}
+
+.pb_25 {
+  padding-bottom: 25px;
+}
+
+.pb_30 {
+  padding-bottom: 30px;
+}
+
+/* -------------◆◆上下パディング◆◆----------- */
+.ptb_5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.ptb_10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*----------------------------------------------------------------------------------
+	◆画像を天地中央に置く処理 (clearfix・float不要)
+----------------------------------------------------------------------------------*/
+.vertical_centered {
+  display: table;
+  margin: 0 auto;
+}
+
+.vertical_centered div,
+.vertical_centered li {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+* html .vertical_centered div,
+* html .vertical_centered li {
+  /* IE 6 */
+  display: inline;
+  zoom: 1;
+}
+
+*:first-child + html .vertical_centered div,
+*:first-child + html .vertical_centered li {
+  /* IE 7 */
+  display: inline;
+  zoom: 1;
+}
+
+/*----------------------------------------------------------------------------------
+	◆floatで並べたリストのセンタリング
+----------------------------------------------------------------------------------*/
+.centered {
+  position: relative;
+  overflow: hidden;
+}
+
+.centered ul {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  left: 50%;
+}
+
+.centered ul li {
+  float: left;
+  margin: 0px;
+  position: relative;
+  left: -50%;
+}
+
+.flo_l {
+  float: left;
+}
+
+.flo_r {
+  float: right;
+}
+
+/*----------------------------------------------------------------------------------
+	clearfix
+----------------------------------------------------------------------------------*/
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0px;
+  visibility: hidden;
+  margin: 0px;
+  font-size: 0pt;
+  line-height: 0%;
+}
+
+.clearfix {
+  _height: 1px;
+  min-height: 1px;
+  /*￥*/
+     /*/
+height: auto;
+overflow: hidden;
+/**/
+}
+/*----------------------------------------------------------------------------------
+	ペンギン
+----------------------------------------------------------------------------------*/
+.sleep_penguin {
+	position: relative;
+	float: right;
+	width: 100px;
+	height: 100px;
+	background: url(../images/icon_sleep.png) no-repeat;
+	animation: sleep_penguin 2s steps(10) alternate infinite;
+}
+@keyframes sleep_penguin {
+	to {background-position: -1000px 0;}
+}
