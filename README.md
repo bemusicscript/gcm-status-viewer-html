@@ -12,7 +12,7 @@ SEGA Rhythm game status viewer by @stypr.
 
 ## Example
 
-https://gaming.harold.kim/maimai/
+https://gaming.harold.kim/ongeki/
 
 https://gaming.harold.kim/chunithm/
 
